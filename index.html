@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MovieFlix</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <h1 class="logo">
+        <i class="fas fa-film"></i> CineMovies
+    </h1>
+
+    <!-- Search Bar with Icon -->
+    <div class="search-container">
+        <i class="fas fa-search search-icon"></i>
+        <!-- <input type="text" placeholder="Search movies..." class="search-bar"> -->
+    </div>
+</header>
+
+
+
+<!-- SLIDER -->
+<!-- SLIDER -->
+<section class="slider">
+    <button class="nav-btn prev" onclick="prevSlide()">❮</button>
+
+    <div class="slides">
+        <img src="images/9.jpg" class="slide active">
+        <img src="images/4.jpg" class="slide">
+        <img src="images/1.jpg" class="slide">
+    </div>
+
+    <button class="nav-btn next" onclick="nextSlide()">❯</button>
+</section>
+
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
+
+function showSlide(index){
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[index].classList.add("active");
+}
+
+function nextSlide(){
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+function prevSlide(){
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+}
+</script>
+
+<!-- SECTION TITLE -->
+<h2 class="section-title">Top Rated ★ Movies Recommendation</h2>
+
+
+
+<!-- MOVIES -->
+<section class="movie-container">
+
+    <a href="movie1.html" class="movie-card">
+        <img src="images/1.jpg">
+        <div class="movie-info">House Of David</div>
+    </a>
+
+    <a href="movie2.html" class="movie-card">
+        <img src="images/2.jpg">
+        <div class="movie-info">Jolly LLB 3</div>
+    </a>
+
+    <a href="movie3.html" class="movie-card">
+        <img src="images/3.jpg">
+        <div class="movie-info">War</div>
+    </a>
+
+    <a href="movie4.html" class="movie-card">
+        <img src="images/4.jpg">
+        <div class="movie-info">Krrish-4</div>
+    </a>
+
+    <a href="movie5.html" class="movie-card">
+        <img src="images/5.jpg">
+        <div class="movie-info">Chal Mera Putt - 4</div>
+    </a>
+
+    <a href="movie6.html" class="movie-card">
+        <img src="images/6.jpg">
+        <div class="movie-info">Tarzan</div>
+    </a>
+
+    <a href="movie7.html" class="movie-card">
+        <img src="images/7.jpg">
+        <div class="movie-info">Trick r Treat</div>
+    </a>
+
+    <a href="movie8.html" class="movie-card">
+        <img src="images/8.jpg">
+        <div class="movie-info">maula jatt</div>
+    </a>
+
+    <a href="movie9.html" class="movie-card">
+        <img src="images/9.jpg">
+        <div class="movie-info">Tom and Jerry</div>
+    </a>
+
+    <a href="movie10.html" class="movie-card">
+        <img src="images/10.jpg">
+        <div class="movie-info">IT</div>
+    </a>
+
+    <!-- MORE BUTTON -->
+<div class="more-button-container">
+    <a href="#" class="more-button">More Movies</a>
+</div>
+
+
+</section>
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-content">
+        <p>Developed by Wareesha Babar & Ambreen Anwar Afridi</p>
+        <p>&copy; 2026 CineMovies. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
